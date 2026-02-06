@@ -3,6 +3,7 @@
     padding: 0;
 }
 h1 {
+    margin-top: 3rem;
     font-size: 3rem;
 }
 body {
@@ -63,7 +64,13 @@ body {
 }
 
 .msg-container {
-    height: 40vmin;
+    height: 100vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
 }
 
 .hide {
