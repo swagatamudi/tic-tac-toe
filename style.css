@@ -3,11 +3,18 @@
     padding: 0;
 }
 h1 {
-    margin-top: 3rem;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    margin-top: 2.5rem;
     font-size: 3rem;
 }
+
+#showTurn {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 1.25rem;
+}
+
 body {
-    background-color: #335C81;
+    background-color: #6B2D8A;
     text-align: center;
     color: #ffffff;
 }
@@ -30,6 +37,7 @@ body {
 }
 
 .box {
+    font-family: "Comic Sans MS", sans-serif;
     height: 18vmin;
     width: 18vmin;
     border-radius: 1rem;
@@ -41,24 +49,27 @@ body {
 }
 
 #reset-btn {
+    font-family: "Comic Sans MS", cursive, sans-serif;
     padding: 1rem;
     font-size: 1.5rem;
-    background-color: #1B2845;
+    background-color: #2B003F;
     color: #ffffff;
     border-radius: 1rem;
     border: none;
 }
 
 #new-btn {
+    font-family: "Comic Sans MS", cursive, sans-serif;
     padding: 1rem;
     font-size: 1.5rem;
-    background-color: #1B2845;
+    background-color: #2B003F;
     color: #ffffff;
     border-radius: 1rem;
     border: none;
 }
 
 #msg {
+    font-family: "Comic Sans MS", cursive, sans-serif;
     color: whitesmoke;
     font-size: 5vmin;
 }

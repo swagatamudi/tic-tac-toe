@@ -3,6 +3,7 @@ let resetBtn = document.querySelector("#reset-btn");
 let newGameBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
+let showTurn = document.querySelector("#showTurn");
 
 let turnO = true;
 
@@ -17,8 +18,11 @@ const winPatterns = [
     [6, 7, 8]
 ]
 
+let moveCount = 0;
+
 const resetGame = () => {
     turnO = true;
+    moveCount = 0;
     enableBoxes();
     msgContainer.classList.add("hide");
 }
@@ -26,15 +30,21 @@ const resetGame = () => {
 boxes.forEach((box) => {
     box.addEventListener("click", () => {
         if(turnO) {
+            showTurn.innerText = "Player X's Turn";
             box.innerText = 'O';
-            box.style.color = "Green";
+            box.style.color = "#F1C40F";
+            box.style.fontWeight = "700";
             turnO= false;
         } else {
+            showTurn.innerText = "Player O's Turn";
             box.innerText = 'X';
-            box.style.color = "Red";
+            box.style.color = "#4CC9F0";
+            box.style.fontWeight = "700";
             turnO = true;
         }
         box.disabled = true;
+        moveCount++;
+        draw (moveCount);
         checkWinner();
     });
 });
@@ -74,3 +84,11 @@ const checkWinner = () => {
 
 newGameBtn.addEventListener("click", resetGame);
 resetBtn.addEventListener("click", resetGame);
+
+const draw = (moveCount) => {
+    if(moveCount==9) {
+       msg.innerText = "It's a Draw!";
+       msgContainer.classList.remove("hide");
+       disableBoxes(); 
+    }
+}
