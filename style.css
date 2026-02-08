@@ -87,3 +87,9 @@ body {
 .hide {
     display: none;
 }
+
+.winner {
+  background-color: #b6ecb9;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}

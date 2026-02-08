@@ -23,6 +23,9 @@ let moveCount = 0;
 const resetGame = () => {
     turnO = true;
     moveCount = 0;
+    boxes.forEach(box => {
+        box.classList.remove("winner");
+    });
     enableBoxes();
     msgContainer.classList.add("hide");
 }
@@ -32,7 +35,7 @@ boxes.forEach((box) => {
         if(turnO) {
             showTurn.innerText = "Player X's Turn";
             box.innerText = 'O';
-            box.style.color = "#F1C40F";
+            box.style.color = "#F1C40F"; 
             box.style.fontWeight = "700";
             turnO= false;
         } else {
@@ -76,7 +79,12 @@ const checkWinner = () => {
 
         if(pos1Val!="" && pos2Val!="" && pos3Val!=""){
             if(pos1Val === pos2Val && pos2Val === pos3Val) {
-                showWinner(pos1Val);
+                for (let index of pattern) {
+                    boxes[index].classList.add("winner");
+                }
+                setTimeout(() => {
+                    showWinner(pos1Val);
+                }, 1000);
             }
         }
     }
