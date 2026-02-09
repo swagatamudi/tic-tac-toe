@@ -50,8 +50,8 @@ boxes.forEach((box) => {
         }
         box.disabled = true;
         moveCount++;
-        draw (moveCount);
         checkWinner();
+        draw (moveCount);
     });
 });
 
