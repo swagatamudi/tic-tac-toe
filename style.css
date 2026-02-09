@@ -37,7 +37,7 @@ body {
 }
 
 .box {
-    font-family: "Comic Sans MS", sans-serif;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     height: 18vmin;
     width: 18vmin;
     border-radius: 1rem;
@@ -75,7 +75,7 @@ body {
 }
 
 .msg-container {
-    height: 100vmin;
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
