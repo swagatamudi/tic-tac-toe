@@ -72,7 +72,6 @@ const showWinner = (winner) => {
     msg.innerText = `Congratulations! Winner is ${winner}`;
     msgContainer.classList.remove("hide");
     main.style.display = "none";
-    disableBoxes();
 }
 
 const checkWinner = () => {
@@ -83,12 +82,13 @@ const checkWinner = () => {
 
         if(pos1Val!="" && pos2Val!="" && pos3Val!=""){
             if(pos1Val === pos2Val && pos2Val === pos3Val) {
+                disableBoxes();
                 for (let index of pattern) {
                     boxes[index].classList.add("winner");
                 }
                 setTimeout(() => {
                     showWinner(pos1Val);
-                }, 1000);
+                }, 2000);
             }
         }
     }
